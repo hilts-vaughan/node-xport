@@ -3,6 +3,7 @@
   "description": "a module export (simplifier?) utility package for node.js",
   "version": "0.0.1",
   "private": false,
+  "keywords": [ "module", "export", "exports" ],
   "repository": {
     "type": "git",
     "url": "https://github.com/pandacoder/node-xport.git"
