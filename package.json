@@ -1,7 +1,7 @@
 {
   "name": "node-xport",
   "description": "a module export (simplifier?) utility package for node.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "keywords": [ "module", "export", "exports" ],
   "repository": {
@@ -13,10 +13,11 @@
     "email": "lodico.rj@gmail.com",
     "url": "http://pandacoder.net"
   },
-  "homepage": "https://github.com/pandacoder/node-xport.git",
+  "homepage": "https://github.com/pandacoder/node-xport",
   "bugs": {
     "url": "https://github.com/pandacoder/node-xport/issues"
   },
+  "license": "GNU GPL v3",
   "licenses": [
     {
       "type": "GNU GPL v3",
@@ -33,6 +34,11 @@
   "engines": {
     "node": "^0.10.33"
   },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "xport.js"
+  ],
   "scripts": {
     "test-travis": ""
   },
