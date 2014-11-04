@@ -1,0 +1,45 @@
+{
+  "name": "node-xport",
+  "description": "a module export (simplifier?) utility package for node.js",
+  "version": "0.0.1",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pandacoder/node-xport.git"
+  },
+  "author": {
+    "name": "Robbie Lodico",
+    "email": "lodico.rj@gmail.com",
+    "url": "http://pandacoder.net"
+  },
+  "homepage": "https://github.com/pandacoder/node-xport.git",
+  "bugs": {
+    "url": "https://github.com/pandacoder/node-xport/issues"
+  },
+  "licenses": [
+    {
+      "type": "GNU GPL v3",
+      "url": "https://github.com/pandacoder/node-xport/blob/master/LICENSE"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Robbie Lodico",
+      "email": "lodico.rj@gmail.com",
+      "url": "http://pandacoder.net"
+    }
+  ],
+  "engines": {
+    "node": "^0.10.33"
+  },
+  "scripts": {
+    "test-travis": ""
+  },
+  "main": "./xport",
+  "devDependencies": {
+    "debug": "~0.7.2",
+    "supertest": "~0.14.0",
+    "mocha": "^2.0.1",
+    "should": "^4.1.0"
+  }
+}
