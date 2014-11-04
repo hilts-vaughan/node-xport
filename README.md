@@ -19,7 +19,7 @@ xport(module, myExports);
 
 [image-npm]: https://img.shields.io/npm/v/node-xport.svg?style=flat
 [image-tra]: http://img.shields.io/travis/PandaCoder/node-xport.svg?style=flat
-[image-lic]: http://img.shields.io/npm/l/express.svg?style=flat
+[image-lic]: http://img.shields.io/npm/l/node-xport.svg?style=flat
 [image-dls]: https://img.shields.io/npm/dm/node-xport.svg?style=flat
 
 [url-npm]: https://npmjs.org/package/node-xport
