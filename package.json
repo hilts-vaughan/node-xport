@@ -1,7 +1,7 @@
 {
   "name": "node-xport",
   "description": "a module export (simplifier?) utility package for node.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "keywords": [ "module", "export", "exports" ],
   "repository": {
