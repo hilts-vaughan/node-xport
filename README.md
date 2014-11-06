@@ -21,7 +21,7 @@ Full/combined exports are done by exporting some object and then making partial 
 * [Partial exports (Partial)](#refv020-Partial)
 * [Combined exports](#refv020-Combined)
 
-#### <a name="refv020-Class"></a> Class export [<sup><strong>EXAMPLES</strong></sup>](#refv020-Examples)
+#### <a name="refv020-Class"></a> Class export [ref-v020-examples][Examples]
 ```js
 var xport = require('node-xport')(module);
 
@@ -110,7 +110,7 @@ xport('myObject', objectExport);
 xport('whatAmI', whatAmI);
 ```
 
-<a name="refv011"></a> Example v0.1.1 and earlier [<sup><strong>TOP</strong></sup>](#top)
+<a name="refv011"></a> Example v0.1.1 and earlier [ref-top][Top]
 -------------------------------------------------
 ```js
 var xport = require('node-xport');
@@ -130,3 +130,6 @@ xport(module, myExports);
 [url-tra]: https://travis-ci.org/PandaCoder/node-xport
 [url-lic]: https://github.com/PandaCoder/node-xport/blob/master/LICENSE
 [url-dls]: https://npmjs.org/package/node-xport
+
+[ref-top]: (#top)
+[ref-v020-examples]: (#ref-v020-examples)
