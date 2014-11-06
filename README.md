@@ -9,19 +9,19 @@
 ###[Using node-xport v0.2.0 or later](#refv020)
 ###[Using node-xport v0.1.1 or earlier](#refv011)
 
-<a name="refv020"></a> v0.2.0+ Reference
+<a name="refv020"></a> v0.2.0+ Reference [<sup><strong>TOP</strong></sup>](#top)
 ----------------------------------------
 node-xport v0.2.0+ supports two different types of module export, partial exports and full/combined exports.
 Full/combined exports are done by exporting some object and then making partial exports afterwards, as you can see [below](#refv020-Combined). If you do a full export after making partial exports, it will wipe out the partial exports.
 
-### Examples
+### <a name="refv020-Examples"></a> Examples
 * [Class exports (Full)](#refv020-Class)
 * [Function exports (Full)](#refv020-Function)
 * [Object exports (Full)](#refv020-Object)
 * [Partial exports (Partial)](#refv020-Partial)
 * [Combined exports](#refv020-Combined)
 
-#### <a name="refv020-Class"></a> Class export
+#### <a name="refv020-Class"></a> Class export [<sup><strong>EXAMPLES</strong></sup>](#refv020-Examples)
 ```js
 var xport = require('node-xport')(module);
 
@@ -44,7 +44,7 @@ var classExport = (function() {
 xport(classExport);
 ```
 
-#### <a name="refv020-Function"></a> Function export
+#### <a name="refv020-Function"></a> Function export [<sup><strong>EXAMPLES</strong></sup>](#refv020-Examples)
 ```js
 var xport = require('node-xport')(module);
 
@@ -55,7 +55,7 @@ var functionExport = function(num, str) {
 xport(functionExport);
 ```
 
-#### <a name="refv020-Object"></a> Object export
+#### <a name="refv020-Object"></a> Object export [<sup><strong>EXAMPLES</strong></sup>](#refv020-Examples)
 ```js
 var xport = require('node-xport')(module);
 
@@ -70,7 +70,7 @@ var objectExport = {
 xport(objectExport);
 ```
 
-#### <a name="refv020-Partial"></a> Partial export
+#### <a name="refv020-Partial"></a> Partial export [<sup><strong>EXAMPLES</strong></sup>](#refv020-Examples)
 ```js
 var xport = require('node-xport')(module);
 
@@ -84,7 +84,7 @@ xport('myObject', objectExport);
 xport('whatAmI', whatAmI);
 ```
 
-#### <a name="refv020-Combined"></a> Combined export
+#### <a name="refv020-Combined"></a> Combined export [<sup><strong>EXAMPLES</strong></sup>](#refv020-Examples)
 ```js
 var xport = require('node-xport')(module);
 
@@ -110,7 +110,7 @@ xport('myObject', objectExport);
 xport('whatAmI', whatAmI);
 ```
 
-<a name="refv011"></a> Example v0.1.1 and earlier
+<a name="refv011"></a> Example v0.1.1 and earlier [<sup><strong>TOP</strong></sup>](#top)
 -------------------------------------------------
 ```js
 var xport = require('node-xport');
@@ -120,8 +120,6 @@ var myExports = {};
 xport(module, myExports);
 
 ```
-
-[**BACK TO TOP**](#top)
 
 [image-npm]: https://img.shields.io/npm/v/node-xport.svg?style=flat
 [image-tra]: http://img.shields.io/travis/PandaCoder/node-xport.svg?style=flat
