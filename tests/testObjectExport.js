@@ -16,24 +16,21 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-var xport = function(module) {
-    if (!module) {
-        return function() {};
-    }
+var xport = require('../xport')(module)
+  , assert = require('assert')
+  , objectExport = require('./exampleObjectExport')
+  ;
 
-    return function(exportName, exportValue) {
-        if (!module) {
-            return undefined;
-        }
+function Tester() {}
 
-        module.exports = (module.exports || {});
-        if (!exportValue || typeof exportName !== 'string') {
-            return module.exports = (exportValue || exportName);
-        }
-
-        return module.exports[exportName] = exportValue;
-    };
+Tester.runTests = function() {
+    assert.notEqual(objectExport, undefined);
+    assert.notEqual(objectExport, null);
+    
+    assert.equal(objectExport.somenumber, 99);
+    assert.equal(objectExport.somestring, "a string");
+    assert.notEqual(objectExport.someobject, undefined);
+    assert.notEqual(objectExport.someobject, null);
 };
 
-/* Export the module */
-xport(module)(xport);
+xport(Tester);

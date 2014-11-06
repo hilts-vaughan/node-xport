@@ -16,24 +16,14 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-var xport = function(module) {
-    if (!module) {
-        return function() {};
+var xport = require('../xport')(module);
+
+var objectExport = {
+    'somenumber': 99,
+    'somestring': "a string",
+    'someobject': {
+        'myname': "An Object"
     }
-
-    return function(exportName, exportValue) {
-        if (!module) {
-            return undefined;
-        }
-
-        module.exports = (module.exports || {});
-        if (!exportValue || typeof exportName !== 'string') {
-            return module.exports = (exportValue || exportName);
-        }
-
-        return module.exports[exportName] = exportValue;
-    };
 };
 
-/* Export the module */
-xport(module)(xport);
+xport(objectExport);
