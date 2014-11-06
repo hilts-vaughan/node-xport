@@ -16,26 +16,10 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-var xport = require('../xport')(module)
-  , testClassExport = require('./testClassExport')
-  , testCombinedExport = require('./testCombinedExport')
-  , testFunctionExport = require('./testFunctionExport')
-  , testObjectExport = require('./testObjectExport')
-  , testPartialExport = require('./testPartialExport')
-  , testLegacyExport = require('./testLegacyExport')
-  ;
+var xport = require('../xport');
 
-function Tester() {}
+function legacy(param) {
+    return "this is a legacy export. param=" + param;
+}
 
-Tester.runTests = function() {
-    testClassExport.runTests();
-    testFunctionExport.runTests();
-    testObjectExport.runTests();
-    testPartialExport.runTests();
-    testCombinedExport.runTests();
-    testLegacyExport.runTests();
-};
-
-Tester.runTests();
-
-xport(Tester);
+xport(module, legacy);

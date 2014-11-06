@@ -14,7 +14,9 @@
 node-xport v0.2.0+ supports two different types of module export, partial exports and full/combined exports.
 Full/combined exports are done by exporting some object and then making partial exports afterwards, as you can see [below](#refv020-Combined). If you do a full export after making partial exports, it will wipe out the partial exports.
 
-_**DEVELOPERS**_: Tests can be run from the command line by executing ```npm test```. No output indicates everything passed <sub><sup>(or node secretly hates you)</sup></sub>.
+_Note_: v0.2.x ___is___ backwards compatible with v0.1.1 and earlier.
+
+___DEVELOPERS___: Tests can be run from the command line by executing ```npm test```. No output indicates everything passed <sub><sup>(or node secretly hates you)</sup></sub>.
 
 ### <a name="refv020-Examples"></a> Examples
 * [Class exports (Full)](#refv020-Class)

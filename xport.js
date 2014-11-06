@@ -16,9 +16,16 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-var xport = function(module) {
+var xport = function(module, exports) {
     if (!module) {
         return function() {};
+    }
+
+    /* Maintain backwards compatibility with node-xport v0.1.1- */
+    if (exports) {
+        if (typeof module !== 'undefined' && module.exports) {
+            module.exports = exports;
+        }
     }
 
     return function(exportName, exportValue) {

@@ -17,25 +17,16 @@
 */
 
 var xport = require('../xport')(module)
-  , testClassExport = require('./testClassExport')
-  , testCombinedExport = require('./testCombinedExport')
-  , testFunctionExport = require('./testFunctionExport')
-  , testObjectExport = require('./testObjectExport')
-  , testPartialExport = require('./testPartialExport')
-  , testLegacyExport = require('./testLegacyExport')
+  , assert = require('assert')
+  , legacyExport = require('./exampleLegacyExport')
   ;
 
 function Tester() {}
 
 Tester.runTests = function() {
-    testClassExport.runTests();
-    testFunctionExport.runTests();
-    testObjectExport.runTests();
-    testPartialExport.runTests();
-    testCombinedExport.runTests();
-    testLegacyExport.runTests();
+    assert.notEqual(legacyExport, undefined);
+    assert.notEqual(legacyExport, null);
+    assert.equal(legacyExport("testing?!:"), "this is a legacy export. param=testing?!:");
 };
-
-Tester.runTests();
 
 xport(Tester);
